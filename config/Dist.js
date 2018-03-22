@@ -23,16 +23,24 @@ class WebpackDistConfig extends WebpackBaseConfig {
                 chunkFilename: 'scripts/modules/[id].[chunkhash:16].js',
                 filename: 'scripts/[name].[chunkhash:16].js'
             },
+            optimization: {
+                splitChunks: {
+                    cacheGroups: {
+                        vendor: {
+                            chunks: 'initial',
+                            test: 'vendor',
+                            name: 'vendor',
+                            enforce: true
+                        }
+                    }
+                }
+            },
             plugins: [
-                new webpack.optimize.CommonsChunkPlugin({
-                    name: 'vendor',
-                    filename: 'scripts/[name].[chunkhash:16].js'
-                }),
                 new ExtractTextPlugin('styles/[name].[contenthash:16].css'),
                 new HtmlWebpackPlugin({
                     template: 'index.ejs',
                     inject: 'body',
-                    title: '智能导诊台',
+                    title: 'Demo',
                     minify: {
                         collapseWhitespace: true,
                         conservativeCollapse: true
