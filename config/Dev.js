@@ -13,7 +13,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
         this.config = {
             mode: 'development',
             entry: {
-                app: ['babel-polyfill', './src/index.js']
+                app: ['./src/index.js']
             },
             devtool: 'cheap-module-eval-source-map',
             devServer: {
@@ -37,7 +37,7 @@ class WebpackDevConfig extends WebpackBaseConfig {
                 new HtmlWebpackPlugin({
                     template: 'index.ejs',
                     inject: 'body',
-                    title: '智能导诊台',
+                    title: 'Title',
                     minify: {
                         collapseWhitespace: true,
                         conservativeCollapse: true

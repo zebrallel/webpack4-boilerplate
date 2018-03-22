@@ -14,7 +14,7 @@ class WebpackDistConfig extends WebpackBaseConfig {
         this.config = {
             mode: 'production',
             entry: {
-                vendor: ['babel-polyfill', 'react', 'react-dom'],
+                vendor: ['react', 'react-dom'],
                 app: ['./src/index.js']
             },
             output: {
