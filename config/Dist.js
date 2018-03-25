@@ -15,7 +15,7 @@ class WebpackDistConfig extends WebpackBaseConfig {
             mode: 'production',
             entry: {
                 vendor: ['react', 'react-dom'],
-                app: ['./src/index.js']
+                app: ['./src/index.tsx']
             },
             output: {
                 path: path.resolve(__dirname, '../dist'),

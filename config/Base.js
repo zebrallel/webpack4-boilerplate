@@ -4,7 +4,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 class WebpackBaseConfig {
-    constructor(){
+    constructor() {
         this.env = 'dev'
         this._config = {}
     }
@@ -28,9 +28,14 @@ class WebpackBaseConfig {
             module: {
                 rules: [
                     {
-                        test: /\.(js|jsx)$/,
+                        test: /\.jsx?$/,
                         include: [this.srcPathAbsolute],
                         loader: ['babel-loader']
+                    },
+                    {
+                        test: /\.tsx?$/,
+                        include: [this.srcPathAbsolute],
+                        use: ['ts-loader', 'babel-loader']
                     },
                     {
                         test: /\.css$/,

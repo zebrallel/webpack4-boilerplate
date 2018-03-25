@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "es6",
+        "target": "es6",
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "outDir": "./dist/",
+        "jsx": "preserve", // 不做jsx转换，交由babel处理
+        "strict": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
+}
