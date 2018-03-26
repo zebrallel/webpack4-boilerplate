@@ -28,14 +28,14 @@ class WebpackBaseConfig {
             module: {
                 rules: [
                     {
-                        test: /\.jsx?$/,
+                        test: /\.(js|jsx|ts|tsx)$/,
                         include: [this.srcPathAbsolute],
                         loader: ['babel-loader']
                     },
                     {
                         test: /\.tsx?$/,
                         include: [this.srcPathAbsolute],
-                        use: ['ts-loader', 'babel-loader']
+                        use: ['ts-loader']
                     },
                     {
                         test: /\.css$/,
@@ -47,7 +47,7 @@ class WebpackBaseConfig {
                         test: /\.(sass|scss)$/,
                         loader: ExtractTextPlugin.extract({
                             fallback: 'style-loader',
-                            use: ['css-loader', 'sass-loader']
+                            use: ['css-loader', 'postcss-loader', 'sass-loader']
                         })
                     },
                     {
