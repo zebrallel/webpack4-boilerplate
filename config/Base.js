@@ -40,14 +40,16 @@ class WebpackBaseConfig {
                     {
                         test: /\.css$/,
                         loader: ExtractTextPlugin.extract({
-                            use: 'css-loader'
+                            use: 'css-loader',
+                            publicPath: '../'
                         })
                     },
                     {
                         test: /\.(sass|scss)$/,
                         loader: ExtractTextPlugin.extract({
                             fallback: 'style-loader',
-                            use: ['css-loader', 'postcss-loader', 'sass-loader']
+                            use: ['css-loader', 'postcss-loader', 'sass-loader'],
+                            publicPath: '../'
                         })
                     },
                     {
