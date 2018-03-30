@@ -2,7 +2,7 @@
     "compilerOptions": {
         "module": "es6",
         "target": "es6",
-        "noImplicitAny": false,
+        "noImplicitAny": true,
         "allowSyntheticDefaultImports": true,
         "sourceMap": true,
         "outDir": "./dist/",

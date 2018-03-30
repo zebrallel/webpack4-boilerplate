@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+
+    .block {
+        display: inline-block;
+        margin-right: 5px;
+        line-height: 32px;
+        background: #eff7fe;
+        border: #e5e5e5 solid 1px;
+        border-radius: 2px;
+        min-width: 32px;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background: #739ebd;
+        }
+    }
+
+    .block.disabled {
+        background: #dedbdb;
+        color: #b2b2b2;
+
+        &:hover {
+            color: #b2b2b2;
+        }
+    }
+
+    .block.active {
+        color: #fff;
+        background: #739ebd;
+    }
+}

@@ -1,14 +1,8 @@
-import './index.scss'
+import 'reset.css'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
-
-class App extends React.Component{
-    render(){
-        return (
-            <h1>Hello World</h1>
-        )
-    }
-}
+import App from './App/App'
 
 ReactDOM.render(
     <App />,

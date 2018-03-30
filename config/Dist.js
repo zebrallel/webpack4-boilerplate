@@ -14,7 +14,7 @@ class WebpackDistConfig extends WebpackBaseConfig {
         this.config = {
             mode: 'production',
             entry: {
-                vendor: ['react', 'react-dom'],
+                vendor: ['react', 'react-dom', 'react-router-dom'],
                 app: ['./src/index.tsx']
             },
             output: {

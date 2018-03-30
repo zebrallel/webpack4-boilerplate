@@ -1,0 +1,23 @@
+.menu {
+    position: absolute;
+    border-right: #e5e5e5 solid 1px;
+    width: 200px;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    a {
+        color: #333;
+        line-height: 40px;
+        text-align: center;
+        width: 100%;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: #e5e5e5 solid 1px;
+    }
+
+    a.active{
+        background: #417fab;
+        color: #fff;
+    }
+}
